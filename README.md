@@ -1,4 +1,6 @@
 flux-reqs
 =========
 
-Requirements for a workflow framework
+Requirements for Flux workflow framework.
+
+2013-04-19, Oliver Fields <oliver@phnd.net>
