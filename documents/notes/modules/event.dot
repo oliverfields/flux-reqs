@@ -1,0 +1,29 @@
+digraph ticket {
+
+create_event         [label="Setup new event"];
+update_event         [label="Update event"];
+add_roles            [label="Add roles"];
+publish_event        [label="Publish event"];
+apply_for_role       [label="Apply for role at event"];
+invite_apply_role    [label="Invite people to apply for role"];
+view_available_roles [label="View available roles"];
+view_my_roles        [label="View assigned roles"];
+inform_change_event  [label="Inform assigned roles about event change"];
+confirm_role         [label="Confirm/accept role"];
+reject_role          [label="Reject role"];
+rate_person          [label="Rate person"];
+reminders            [label="Send reminders"];
+
+create_event         -> add_roles;
+add_roles            -> publish_event;
+publish_event        -> apply_for_role;
+publish_event        -> invite_apply_role;
+publish_event        -> update_event;
+update_event         -> publish_event;
+publish_event        -> inform_change_event;
+
+view_available_roles -> apply_for_role;
+
+view_my_roles        -> confirm_role;
+
+}

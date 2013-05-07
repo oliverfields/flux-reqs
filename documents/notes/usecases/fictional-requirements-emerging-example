@@ -1,0 +1,31 @@
+The following describes how a company matures in their need for workflow. What would the system need to do as minimum for each step, in order to support the following maturing needs.
+
+1. Company needs to accept applications from web site
+2. Address data from application must be screened as valid using external REST api
+3. Creditcards need checking
+4. User login details from existing online CRM with an API
+5. Generate reports showing how many applications are beeing handled by each customer rep and how long they are waiting for manual intervention by customer rep or customer
+6. On completion of application, create user in org. mail system
+7. On application from user, if live in post code >3400 charge 300NOK, else charege 400NOK
+8. How to see applications assigned to you
+9. Application needs a new field for attibute x, how to add and how to add checks for it in rules. What changes must be made to the system to add the field?
+10. Application needs attribute y to be a integer instead of a string, how to update that
+11. Company needs to accept applications from email as well
+12. Client users needs to know what a application looked like at a point in time
+13. If a ticket has been in task list too long it needs to be escalated to admin
+14. Client needs to generate 100 applications
+15. Client needs dashboard in office to show current tasks in queue
+16. Application needs to automatically do credit rating using external API on submission
+17. Client needs task run for each client in it's CRM database on their birthday
+18. Client has two existing systems that need workflow to communicate. Their order system allows customers to order parts but the don't want to bill before 20 days has passed if the order is above 20K, at that point they want a customer rep to call the client and check all ok befor billing, on billing they want to update their account system.
+19. The clients IT guy wants to change a workflow
+20. Only applications that match certain criteria require manual inspection, the rest are automatically approved -> How to change these rules
+21. The client wants to change their names for fields
+22. When client adds a new customer to their CRM, they want a workflow to automatically run a credit rating
+23. The client wants all users to be able to set a application as Pending approval, but only allow manager or higher roles/group to set them as Approved. The system should automatically assign Pending approval applications to appropriate managers task lists
+24. The client needs applications that are greater then 30K to take precedence in the users task list above those that are worth less
+25. The CEO wants a sms if an application has been waiting for customer representative input longer than 3 days and it is worth more than 5K
+26. The IT dep want to monitor the flow of applications through the system
+27. The IT dep need to know how to manually restart an application that has failed for whatever reason
+28. The client wants to know how they can be sure all applications are handled appropriately, what checks and safeguards are in place? Can the system generate reciepts?
+29. 

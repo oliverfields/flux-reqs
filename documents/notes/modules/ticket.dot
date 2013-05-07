@@ -1,0 +1,43 @@
+digraph ticket {
+
+generate_ticket     [label="Generate ticket from event"];
+new_mail_ticket     [label="Create ticket from mail"];
+new_sms_ticket      [label="Create ticket from sms"];
+new_web_ticket      [label="Create ticket from web form"];
+update_mail_ticket  [label="Update ticket from mail"];
+update_sms_ticket   [label="Update ticket from sms"];
+update_web_ticket   [label="Update ticket from web form"];
+assign_to_list      [label="Assign ticket to appropriate queue"];
+assign_to_rep       [label="Assign ticket to user with appropriate skills"];
+reply_ticket        [label="Reply to ticket"];
+comment_ticket      [label="Comment on ticket"];
+update_ticket       [label="Update ticket (requires ticket ref)"];
+reassign_ticket     [label="Reassign ticket"];
+close_ticket        [label="Close ticket"];
+reject_ticket       [label="Reject ticket"];
+reopen_ticket       [label="Reopen ticket"];
+set_pending_resolve [label="Set ticket to pending resolve"];
+auto_close          [label="Automatically close pending resolve tickets that have been unchanged for X days"];
+remind              [label="Automatically pester owner to update ticket"];
+
+new_mail_ticket     -> generate_ticket;
+new_web_ticket      -> generate_ticket;
+new_sms_ticket      -> generate_ticket;
+update_mail_ticket  -> update_ticket;
+update_web_ticket   -> update_ticket;
+update_sms_ticket   -> update_ticket;
+generate_ticket     -> assign_to_list;
+assign_to_list      -> assign_to_rep;
+assign_to_rep       -> reply_ticket;
+assign_to_rep       -> update_ticket;
+assign_to_rep       -> reassign_ticket;
+assign_to_rep       -> close_ticket;
+assign_to_rep       -> reject_ticket;
+assign_to_rep       -> set_pending_resolve;
+assign_to_rep       -> comment_ticket;
+assign_to_rep       -> remind;
+set_pending_resolve -> auto_close;
+close_ticket        -> reopen_ticket;
+
+
+}

@@ -1,0 +1,6 @@
+1. Application gets created on the queue
+2. Application has status needs_action so picked up by handler assign_application, which does what it says on the tin and user1 is chosen by whatever rules have been defined (e.g. round robin, least assigned applications etc)
+3. Application shows up in user1's task list with status awaiting acceptance, user1 opens up the application and gets form showing the relevant data needed to grant acceptance of the application
+4. User1 reads the application text and needs to get further information from the applicant, the application gets assigned back to the applicant with a message from user1 asking for clarification
+5. The applicant gets a mail asking for more input, the applicant must then login to their task list to update the application, when the applicant submits the application it gets added to queue, this time getting assigned to user1 by needs_action because of rule that says assign applications to users that last worked on them.
+6. User1 tasklist once again contains the application, user1 checks it and is happy, deciding to approve it

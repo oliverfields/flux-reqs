@@ -1,0 +1,11 @@
+# The following conventions are used for modelling flow, KISS baby
+
+digraph {
+
+start [label="Start"];
+manual_process_1 [label="Manual process 1|User 1, User2",shape="rect"];
+manual_process_2 [label=""];
+automatic_process_1 [label=""];
+automatic_process_2 [label=""];
+
+}
